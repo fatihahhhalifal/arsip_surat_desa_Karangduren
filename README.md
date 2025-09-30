@@ -1,61 +1,114 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 📄 Aplikasi Arsip Surat Desa Karangduren
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## 🎯 Tujuan
+Aplikasi ini dibuat untuk membantu perangkat desa Karangduren dalam mengarsipkan surat-surat resmi yang pernah dibuat.  
+Dengan adanya aplikasi ini, surat dapat dikelola dengan lebih rapi, mudah dicari, dan terdokumentasi dengan baik.
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## ✨ Fitur
+- CRUD *Kategori Surat* (Tambah, Edit, Hapus, Lihat)  
+- CRUD *Arsip Surat* (Tambah, Edit, Hapus, Lihat)  
+- Unggah file *PDF* untuk setiap surat  
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 🚀 Cara Menjalankan
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### 1. Clone / Download Project
+- *Clone via Git*
+  bash
+  git clone https://github.com/Kaunang/arsip_surat_desa_Karangduren.git
+  cd arsip_surat_desa_Karangduren
+  
+- *Atau Download ZIP*
+  - Download file ZIP dari repository.
+  - Extract file hasil download.
 
-## Learning Laravel
+### 2. Konfigurasi Database
+- Import file arsip_surat.sql langsung ke MySQL/MariaDB:
+  bash
+  mysql -u root -p < arsip_surat.sql
+- Atau gunakan aplikasi seperti SQLyog
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### 3. Setup Environment
+- Ubah nama file **.env.example** menjadi **.env**  
+  (bisa menggunakan perintah berikut di terminal:)
+  bash
+  cp .env.example .env
+- Ubah konfigurasi database di file .env sesuai pengaturan lokal:
+  env
+  DB_CONNECTION=mysql
+  DB_HOST=127.0.0.1
+  DB_PORT=3306
+  DB_DATABASE=arsip_surat
+  DB_USERNAME=root
+  DB_PASSWORD=
+  
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### 4. Install Dependency
+Jalankan perintah:
+bash
+composer install
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## Laravel Sponsors
+### 5. Storage & Key
+bash
+php artisan storage:link
+php artisan key:generate
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+Jika storage:link error, jalankan ulang:
+bash
+composer install
+php artisan storage:link
 
-### Premium Partners
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+### 6. Menjalankan Aplikasi
+bash
+php artisan serve
 
-## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Akses aplikasi di browser:  
+👉 [http://127.0.0.1:8000/arsip](http://127.0.0.1:8000/arsip)
 
-## Code of Conduct
+---
+## 📸 Screenshot Aplikasi
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### Arsip Surat
+- *Halaman Arsip*
+<img width="1365" height="720" alt="arsip" src="https://github.com/user-attachments/assets/c9dd2390-30b5-4d8d-9c0a-3ba8b066301f" />
 
-## Security Vulnerabilities
+- *Tambah Arsip*
+<img width="1365" height="716" alt="tambah arsip" src="https://github.com/user-attachments/assets/f57dd906-f54b-4681-b977-94a818cd2f79" />
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+- *Lihat Arsip*
+<img width="1365" height="717" alt="lihat arsip" src="https://github.com/user-attachments/assets/c2f16d22-8375-4a99-8b73-221d995a6a62" />
 
-## License
+- *Hapus Arsip*
+<img width="1365" height="717" alt="hapus arsip" src="https://github.com/user-attachments/assets/a209e8b1-1d83-4d91-a4ba-3675c1d94e48" />
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+- *Cari Arsip*
+<img width="1365" height="719" alt="cari arsip surat" src="https://github.com/user-attachments/assets/d005898d-7bed-421e-8a56-ab20966c06d0" />
+
+---
+
+### Kategori Surat
+- *Halaman Kategori*
+<img width="1365" height="720" alt="kategori" src="https://github.com/user-attachments/assets/8153da5f-e7ab-4f46-8aa9-487c53c84e8d" />
+
+- *Tambah Kategori*
+  <img width="1365" height="720" alt="tambah kategori" src="https://github.com/user-attachments/assets/9f2ef08e-76bb-415a-b58c-db3b4e5bc5db" />
+
+- *Edit Kategori*
+<img width="1365" height="717" alt="edit kategori" src="https://github.com/user-attachments/assets/45ea1689-1f09-4e75-9075-d4e73db6216a" />
+
+- *Hapus Kategori*
+<img width="1365" height="718" alt="hapus kategori" src="https://github.com/user-attachments/assets/d3d1c6a4-b3e9-4e4d-b434-f5123863a909" />
+
+- *Cari Kategori*
+<img width="1365" height="718" alt="cari kategori" src="https://github.com/user-attachments/assets/b86ee72d-8530-4635-b35c-54a8d4e9dbab" />
+
+---
+
+### About
+- *Halaman About*
+<img width="1365" height="720" alt="about" src="https://github.com/user-attachments/assets/a08a4e3d-75bc-4b6c-8621-795e9d3f5287" />
