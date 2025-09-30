@@ -17,7 +17,7 @@ Dengan adanya aplikasi ini, surat dapat dikelola dengan lebih rapi, mudah dicari
 ### 1. Clone / Download Project
 - *Clone via Git*
   bash
-  git clone https://github.com/Kaunang/arsip_surat_desa_Karangduren.git
+  git clone https://github.com/fatihahhhalifal/arsip_surat_desa_Karangduren
   cd arsip_surat_desa_Karangduren
   
 - *Atau Download ZIP*
@@ -25,9 +25,9 @@ Dengan adanya aplikasi ini, surat dapat dikelola dengan lebih rapi, mudah dicari
   - Extract file hasil download.
 
 ### 2. Konfigurasi Database
-- Import file arsip_surat.sql langsung ke MySQL/MariaDB:
+- Import file lsp.sql langsung ke MySQL/MariaDB:
   bash
-  mysql -u root -p < arsip_surat.sql
+  mysql -u root -p < lsp.sql
 - Atau gunakan aplikasi seperti SQLyog
 
 ### 3. Setup Environment
@@ -40,7 +40,7 @@ Dengan adanya aplikasi ini, surat dapat dikelola dengan lebih rapi, mudah dicari
   DB_CONNECTION=mysql
   DB_HOST=127.0.0.1
   DB_PORT=3306
-  DB_DATABASE=arsip_surat
+  DB_DATABASE=laravel
   DB_USERNAME=root
   DB_PASSWORD=
   
@@ -68,47 +68,41 @@ php artisan serve
 
 
 Akses aplikasi di browser:  
-👉 [http://127.0.0.1:8000/arsip](http://127.0.0.1:8000/arsip)
+👉 http://127.0.0.1:8000/arsip
 
 ---
 ## 📸 Screenshot Aplikasi
 
 ### Arsip Surat
 - *Halaman Arsip*
-<img width="1365" height="720" alt="arsip" src="https://github.com/user-attachments/assets/c9dd2390-30b5-4d8d-9c0a-3ba8b066301f" />
+<img width="959" height="503" alt="Screenshot 2025-09-30 153702" src="https://github.com/user-attachments/assets/b588cb96-3eb9-4b92-9540-3ce4fbd50040" />
 
 - *Tambah Arsip*
-<img width="1365" height="716" alt="tambah arsip" src="https://github.com/user-attachments/assets/f57dd906-f54b-4681-b977-94a818cd2f79" />
+<img width="959" height="471" alt="Screenshot 2025-09-30 153752" src="https://github.com/user-attachments/assets/d2746436-654c-4a0c-b66d-156438d9af4e" />
 
 - *Lihat Arsip*
-<img width="1365" height="717" alt="lihat arsip" src="https://github.com/user-attachments/assets/c2f16d22-8375-4a99-8b73-221d995a6a62" />
+<img width="959" height="468" alt="Screenshot 2025-09-30 153811" src="https://github.com/user-attachments/assets/83c7c219-6748-4aec-b111-5fde0ebd0081" />
 
 - *Hapus Arsip*
-<img width="1365" height="717" alt="hapus arsip" src="https://github.com/user-attachments/assets/a209e8b1-1d83-4d91-a4ba-3675c1d94e48" />
-
-- *Cari Arsip*
-<img width="1365" height="719" alt="cari arsip surat" src="https://github.com/user-attachments/assets/d005898d-7bed-421e-8a56-ab20966c06d0" />
+<img width="959" height="470" alt="Screenshot 2025-09-30 153842" src="https://github.com/user-attachments/assets/dd25a05c-8894-4277-a40b-03dceaaf7fa4" />
 
 ---
 
 ### Kategori Surat
 - *Halaman Kategori*
-<img width="1365" height="720" alt="kategori" src="https://github.com/user-attachments/assets/8153da5f-e7ab-4f46-8aa9-487c53c84e8d" />
+<img width="959" height="500" alt="Screenshot 2025-09-30 154006" src="https://github.com/user-attachments/assets/1ad280ca-2ea5-40e1-a98a-29b3840ac791" />
 
 - *Tambah Kategori*
-  <img width="1365" height="720" alt="tambah kategori" src="https://github.com/user-attachments/assets/9f2ef08e-76bb-415a-b58c-db3b4e5bc5db" />
+<img width="959" height="475" alt="Screenshot 2025-09-30 154017" src="https://github.com/user-attachments/assets/578c19dd-ebce-4bcf-9d5f-53c892bde7db" />
 
 - *Edit Kategori*
-<img width="1365" height="717" alt="edit kategori" src="https://github.com/user-attachments/assets/45ea1689-1f09-4e75-9075-d4e73db6216a" />
+<img width="959" height="472" alt="Screenshot 2025-09-30 154031" src="https://github.com/user-attachments/assets/68918e4b-504a-4bdb-957b-6240f586c989" />
 
 - *Hapus Kategori*
-<img width="1365" height="718" alt="hapus kategori" src="https://github.com/user-attachments/assets/d3d1c6a4-b3e9-4e4d-b434-f5123863a909" />
-
-- *Cari Kategori*
-<img width="1365" height="718" alt="cari kategori" src="https://github.com/user-attachments/assets/b86ee72d-8530-4635-b35c-54a8d4e9dbab" />
+<img width="959" height="474" alt="Screenshot 2025-09-30 154042" src="https://github.com/user-attachments/assets/9d1105e9-9ea5-4a96-8479-a19e50d6cc42" />
 
 ---
 
 ### About
 - *Halaman About*
-<img width="1365" height="720" alt="about" src="https://github.com/user-attachments/assets/a08a4e3d-75bc-4b6c-8621-795e9d3f5287" />
+  <img width="959" height="500" alt="Screenshot 2025-09-30 154054" src="https://github.com/user-attachments/assets/f86bf439-7bba-4906-9e30-91cd20f262eb" />
